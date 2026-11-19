@@ -31,3 +31,21 @@ spec:
   lifecycle: experimental
   owner: team-payments
   system: agents-demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-orders
+  description: QA fixture - owns orders and the agents-demo system.
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-payments
+  description: QA fixture - owns payments.
+spec:
+  type: team
+  children: []
