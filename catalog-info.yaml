@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: agents-demo
+  description: QA fixture - two services whose repositories give agents MCP servers.
+spec:
+  owner: team-orders
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: orders
+  description: QA fixture - orders service.
+  annotations:
+    backstage.io/source-location: url:https://github.com/StackRailsAI/qa-ai-tools-demo/tree/main/services/orders
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-orders
+  system: agents-demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments
+  description: QA fixture - payments service.
+  annotations:
+    backstage.io/source-location: url:https://github.com/StackRailsAI/qa-ai-tools-demo/tree/main/services/payments
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-payments
+  system: agents-demo

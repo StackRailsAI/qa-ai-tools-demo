@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "local-tools": { "command": "node", "args": ["./scripts/server.js"] },
+    "stripe": { "url": "https://mcp.stripe.com" },
+    "reports": { "url": "${REPORTS_MCP_URL}" }
+  }
+}
