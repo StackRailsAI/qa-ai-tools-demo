@@ -18,6 +18,8 @@
     "local-tools": { "command": "node", "args": ["./tools/server.js"] },
     "internal": { "type": "http", "url": "${INTERNAL_MCP_URL}/mcp" },
     "sentry-old": { "command": "npx", "args": ["-y", "@sentry/mcp-server"], "disabled": true },
+    "mongodb": { "command": "npx", "args": ["-y", "mongodb-mcp-server", "--connectionString", "mongodb://qa:FAKE@db.example.invalid/orders"] },
+    "reports-two": { "type": "http", "url": "${REPORTS_TWO_URL}/mcp" },
     "postgres-prod": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://qa:FAKE_PASSWORD@db.example.invalid/orders"]
